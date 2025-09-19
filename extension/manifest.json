@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "CodeScribe",
+  "version": "1.0",
+  "description": "Summarize GitHub repos using AI",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://localhost:8080/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
